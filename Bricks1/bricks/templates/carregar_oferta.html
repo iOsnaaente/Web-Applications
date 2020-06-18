@@ -1,0 +1,157 @@
+<html>
+    <body>
+        <head><title>Ofertas</title></head>
+        <div>
+            <div>
+                <table id="Top">
+                    <tbody>
+                        <tr>
+                            <td width="300" valign="bottom">
+                                <a href="/home">
+                                    <img src="/static/img/logs/logo300x100.png" width="300" height="100">
+                                </a>                                
+                            </td>
+
+
+
+                            <td width="490" align="middle" valign="center">
+                                <div>
+                                    <form action="/pesquisa" method="POST">
+                                        <select name="pesquisa">
+                                            <option value="vazio">Vazio</option>
+                                            <option value="eletronicos">Eletrônicos</option>
+                                            <option value="eletrodomesticos">Eletrodomèsticos</option>
+                                            <option value="moda">Moda</option>
+                                            <option value="animais">Animais</option>
+                                            <option value="livros">Livros</option>
+                                            <option value="moveis">Móveis</option>
+                                            <option value="ferramentas">Ferramentas</option>
+                                            <option value="esportes">Esportes</option>
+                                            <option value="imoveis">Imómeis</option>
+                                            <option value="automoveis">Automóveis</option>
+                                            <option value="brinquedos">Brinquedos</option>
+                                        </select>
+                                        <button type="submit" >Pesquisar</button>
+                                    </form>
+                                </div>
+                            </td>
+
+                            <td width="80" valign="top">
+                                <td width="100" valign="middle" align="right">
+                                    Sobre nós: 
+                                <td width="150" align="left"> 
+                                    <h4>
+                                    <a href="https://www.facebook.com/BrunoGabriel.1205"> |Bruno</a>
+                                    <br>
+                                    <a href="https://www.facebook.com/peristaltismo"> |Eduardo</a>
+                                    <br>
+                                    <a href="https://www.facebook.com/kesse.jonatas.9"> |Kesse</a>
+                                    <br>
+                                    <a href="https://www.facebook.com/gabriel.niderauer"> |Nied</a>
+                                    
+                                    </h4>
+                                </td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="7" height="53" width="1250">
+                                <nobr>
+                                    <img src="/static/img/logs/Barra.png" width="1250" height="53" alt>
+                            </td>
+                        </tr> 
+                    </tbody>
+                </table>
+            </div>
+            
+            <div>
+                <tr>
+                    <td width="200" align="left" valign="middle">
+                        <a href="/home">
+                        <img src="/static/img/logs/home247x50.png" width="150" height="50" style="padding-right: 50px ; padding-left: 40px">
+                        </a>
+
+                    <td width="200" align="left" valign="middle">
+                        <a href="/lances">
+                        <img src="/static/img/logs/Lances247x50.png" width="150" height="50" style="padding-right: 50px">
+                        </a>
+                    <td width="200" align="left" valign="middle">
+                        <a href="/meus_itens">
+                        <img src="/static/img/logs/MeusItens250x50.png" width="220" height="50" style="padding-right: 70px">
+                        </a>
+
+                    <td width="200" align="left" valign="middle">
+                        <a href="/incluir_item">
+                        <img src="/static/img/logs/InserirItem250x50.png" width="200" height="50" style="padding-right: 70px">
+                        </a>
+
+                    <td width="200" align="left" valign="middle">
+                        <a href="/logout">
+                        <img src="/static/img/logs/Logout247x50.png" width="150" height="50">
+                        </a>
+
+                    </td>
+                </tr>
+                <hr>
+            </div>
+        
+
+
+            <h3>Meus itens:</h3></br>
+            {%for p in si%}
+
+
+            <h3>Título: {{p.titulo}}</h3>
+            <h3>Descrição: {{p.descricao}}</h3>
+
+
+            {% for img in p.imagens  %}
+             <img src= "{{ url_for('static', filename='img/itens/'+img) }}" height="200" width="200"/>
+
+             {% endfor %}
+
+            <a href='/lances/?id_user_lancador={{p.id_user_lancador}}&id_item_lancador={{p.id}}&id_user_alvo={{p.id_user_alvo}}&id_item_alvo={{p.id_item_alvo}}'>
+  
+            <button>
+         
+                <h5>Dar lance</h5>
+         
+            </button>
+
+            </a>
+
+            </br><hr /> 
+     
+            {% endfor %}
+
+
+            
+
+
+            <table>
+                <tbody>
+                    <div>
+                        <hr>
+                        <tr>
+                            <td>
+                                <div>
+                                    <a href="/home">
+                                    <img src="/static/img/logs/rodape200x50.jpg" width="200" height="50">
+                                    </a>
+                                </div>
+                            <td style="padding-left: 75px">
+                                <div>
+                                    "Site desenvolvido durante a disciplina de Programação avançada DPEE 1063 - PROGRAMAÇÃO AVANÇADA"
+                                    <br>
+                                    <a href="/home"> Home </a> 
+                                       |  
+                                    <a href="#Top"> Topo da página </a>
+                                </div>
+                            </td>
+                        </tr>
+                    </div>
+                </tbody>    
+            </table>
+            <hr>
+        </div>
+    </body>
+</html>
