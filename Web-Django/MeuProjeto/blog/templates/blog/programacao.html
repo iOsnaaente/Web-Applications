@@ -1,0 +1,22 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}
+    Programação
+{% endblock %}
+
+{% block link-css-block %}
+
+{% endblock %}
+
+
+{% block content %}
+
+<div >
+    {% for project in proj %}
+        projeto {{project.title}}: 
+        <a href="'{% url 'blog:projeto' projeto.slug %}"> </a>
+        <br>
+    {% endfor %}
+</div>
+
+{% endblock %}

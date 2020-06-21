@@ -1,0 +1,113 @@
+.header-barra-superior{
+    background-color: #fcc;
+    border-bottom: solid 1px #dbb;
+    height: 25px;
+    width: 100%;
+}
+
+.header-container-barra-superior{
+    margin: 0 auto;
+    width: 80%;
+    position: relative;
+}
+
+.logo-header-barra-superior{
+    float: left;
+    padding: 4px;
+    width: 60%;
+}
+
+.redes-sociais-header-barra-superior ul li{
+    list-style: none;
+    padding: 4px;
+    float: right;
+}
+
+.foto-header-barra-superior {
+    font-size: 38px;
+    width: 26px;
+    height: 26px;
+    margin: 0 auto;
+}
+
+.section-1 {
+    background-color: #cfc;
+    border-bottom: solid 1px #bdb;
+    border-top: solid 1px #bdb;
+    width: 100%;
+    height: 70px;
+    margin: 0 auto;
+}
+
+.header-section-1-buttons{
+    width: 70%;
+    float: left;
+    margin: 0 auto;
+    list-style: none;
+}
+
+.header-section-1-buttons ul {
+    display: inline-block;
+    padding: 5px;
+    padding-right: 35px;
+}
+
+.header-section-1-buttons ul li{
+    display: inline-block;
+}
+
+.header-section-1-buttons ul li a{
+    font-size: 15px;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+}
+
+.header-section-1-buttons ul li a:hover{
+    color: #00bac6;
+    border-bottom: 2px solid #00bac6;
+}
+
+.header-section-1-search{
+    height: 69px;
+    width: 30%;
+    margin: 0 auto; 
+    float: right;   
+}
+
+.header-section-1-search ul li{
+    display: block;
+    float: right;
+}
+
+.header-section-1-search ul li input{
+    background-image: url("../img/search-icon.png");
+    background-repeat: no-repeat;
+    background-position: 95%;
+    background-size: 20px 20px;
+    border: 1px solid black;
+    background-color: #ccc;
+    margin-top: 5px;
+    height: 24px;
+    border-radius: 10px;
+}
+.header-section-1-search ul li input:hover{
+    border: 1px solid #00bac6;
+}
+
+.body-section-1 {
+    height: 500px;
+    width: 100%;
+    position: relative;
+    border-bottom: 2px solid black;
+}
+
+.body-section-1-slider-fotos{
+    width: 100%;
+    height: 550px;
+    margin: 0 auto;
+}
+
+ul.slick-dots{
+    bottom: 10px;
+}

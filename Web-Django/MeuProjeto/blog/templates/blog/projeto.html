@@ -1,0 +1,74 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}
+    {{proj.title}}
+{% endblock %}
+
+{% block link-css-block %}
+
+    <link rel="stylesheet" href="../../static/css/projetos.css">
+
+{% endblock %}
+
+
+{% block content %}
+ 
+<div class="container-projeto">
+    <div class="container-projeto-content">
+        <div class="coluna-projeto-descricao">
+            <div class="row-nome-projeto">
+                <h1>
+                    Nome do projeto aqui {{proj.title}}
+                </h1>
+            </div>
+            <div class="row-descricao-projeto">
+                <h5>
+                    Descrição aqui {{proj.descrição}}
+                </h5>
+            </div>
+            <div class="row-autor-projeto">
+                <h4>
+                    Author here {{proj.author}}
+                </h4>
+            </div>
+            <div class="row-data-criacao-projeto">
+                <h6>
+                    data here {{proj.created_at}}
+                </h6>
+            </div>
+            <br>
+            <div class="row-disponivel-em-projeto">
+                <h6>
+                    Disponível em: {{proj.link}}
+                </h6>
+            </div>
+
+       </div>
+       <div class="coluna-projeto-foto">
+           <div class="container-foto-projeto">
+                <div class="foto-projeto">
+                        <figure>
+                            {{proj.img}}
+                        </figure>
+                </div>
+                <div class="row-nome-projeto">
+                        <h4>
+                            Nome do projeto seja muuuuitissimo longuissimo {{proj.title}}
+                        </h4>
+                </div>
+            </div>
+       </div>
+    </div>
+</div>
+
+<br>
+
+<div class="area-projeto">
+    <div class="header-container-barra-superior">
+        <canvas class="canvas-projeto">
+
+        </canvas>
+    </div>
+</div>
+
+{% endblock %}

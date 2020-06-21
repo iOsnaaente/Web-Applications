@@ -1,0 +1,128 @@
+{% load static %}
+
+<! DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <!--Links para os CSS da página-->
+        <link rel="stylesheet" type="text/css" href="../../static/css/main.css">
+        <link rel="stylesheet" type="text/css" href="../../static/css/header-barra-superior.css">
+
+        <!--icons link-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <!--bootstrap-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+        <!-- Para adicionar links especificos-->
+        {% block link-css-block %}{% endblock %}
+
+        <title>
+            {% block title %}{% endblock %}
+        </title>
+
+        
+    </head>
+
+    <body>
+
+        <header>
+            <div class="header-barra-superior">
+                <div class="header-container-barra-superior">    
+                    <div class="logo-header-barra-superior">
+                        <a href="#"> <i class="foto-header-barra-superior fa fa-list"></i></a>
+                    </div>
+                    <div class="redes-sociais-header-barra-superior">
+                        <ul>
+                            <li>
+                                <a href="#"> <i class=" fa fa-facebook foto-header-barra-superior"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"> <i class="foto-header-barra-superior fa fa-instagram"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"> <i class="foto-header-barra-superior fa fa-youtube"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="foto-header-barra-superior fa fa-linkedin"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="foto-header-barra-superior fa fa-github"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="section-1">
+                <div class="header-container-barra-superior">
+                        <section class="header-section-1-buttons">
+                            <ul>
+                                <li>
+                                    <a href="{% url 'blog:home' %}">Home </a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>    
+                                    <a href="{% url 'blog:programacao' %}">Programação </a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <a href="{% url 'blog:web' %}">Web </a>                               
+                                </li>
+                                </ul>
+                            <ul>
+                                <li>
+                                    <a href="{% url 'blog:supervisorio' %}">supervisórios  </a>     
+                                </li>
+                            </ul>                    
+                            <ul>
+                                <li>
+                                    <a href="{% url 'blog:jogos' %}">Joguinhos </a>         
+                                </li>
+                            </ul>                 
+                            <ul>
+                                <li>
+                                    <a href="{% url 'blog:contato' %}">Contato </a>         
+                                </li>
+                            </ul>
+                        </section>
+                        <section class="header-section-1-search">
+                            <ul>
+                                <li>
+                                    <input type="text" placeholder="  Search in site">
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+            </header>
+
+            {% block content %}
+            {% endblock %}
+
+
+
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+        <footer >
+            <div class="header-container-barra-superior" style="padding-top: 10px;">
+                <a style="float: left;"> Página criada para aprendizado em redes e criação web - Bruno Gabriel Flores Sampaio</a>
+                <a style="float: right;" href="/"> Home Page</a>
+            </div>
+        </footer>
+        
+    </body>
+
+
+</html>
