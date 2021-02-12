@@ -1,0 +1,29 @@
+.header-barra-superior{
+    background-color: #999;
+    height: 34px;
+    width: 100%;
+}
+
+.header-container-barra-superior{
+    margin: 0 auto;
+    width: 980px;
+    position: relative;
+}
+
+.logo-header-barra-superior{
+    float: left;
+    padding: 4px;
+    width: 60%;
+}
+
+.redes-sociais-header-barra-superior ul li{
+    list-style: none;
+    padding: 4px;
+    float: right;
+}
+
+.foto-header-barra-superior {
+    width: 26px;
+    height: 26px;
+    margin: 0 auto;
+}

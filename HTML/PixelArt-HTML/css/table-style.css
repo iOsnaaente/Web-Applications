@@ -1,0 +1,42 @@
+body{
+    margin: 0 auto;
+}
+
+header p {
+    margin-top: 0; 
+
+}
+
+.header-body{
+    background-color: aqua;
+    text-align: center;
+    font-size: 28px;
+    color: brown;
+}
+
+.table-shape{
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: 3px solid black
+}
+
+.table-shape td{
+    width: 5px;
+    height: 5px;
+    border: 1px solid rgb(150, 150, 150);
+    text-align: center;
+    vertical-align: center;
+    font-family: monospace;
+    font-size: 18px;
+    position: relative;
+}
+
+.table-pixel-value{
+    font-size: 10px;
+    display: inline-block;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    color: #999;
+}
+
